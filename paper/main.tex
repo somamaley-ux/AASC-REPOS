@@ -1,0 +1,588 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{array}
+\usepackage{longtable}
+
+\title{\textbf{The Bivalence Theorem for Non-Degenerate Reasoning}\\
+\large Standing Conservation, Governance Necessity, and Local Closure}
+\author{Amos Jay Maley}
+\date{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper gives a final governance-level form of the bivalence theorem for non-degenerate reasoning. Its central spine is a standing-conservation law: once a reasoning system supports determinate reference, standing-bearing identity persistence, irreversible commitment, and consequential same-scope inferential use, same-scope governance admits no standing source, no same-act repair, no transfer of standing-bearing authority, and no admissibility-bearing amplification. From that conservation law we derive four consequences. First, same-scope governance relevance is exhausted by standing classification and licensed continuation structure. Second, governance work is exhausted by five loci---redescription stability, act identity, evaluation order, irreversibility, and scope integrity---with no sixth same-scope route. Third, every same-scope governance departure from those loci instantiates a finite failure family that destroys at least one kernel role. Fourth, prior admissibility gating, prohibition of silent redescription and scope drift, and fail-closed handling are therefore forced: non-degenerate reasoning must be AASC-class. The paper also proves the converse on the exact target class fixed here: governance-bearing AASC-class use realizes Reference, Standing, and Irreversibility locally, so there is no same-scope intermediate governance state between the kernel roles and AASC-class governance. Finally, the manuscript proves a local closure theorem: on the exact target class of same-scope governance-bearing reasoning systems, the governance packages sufficient for non-degenerate reasoning are exactly the AASC-class packages up to lawful governance-role equivalence. The result is therefore not merely a one-way necessity theorem but a compact conservation-driven equivalence and local-closure theorem.
+\end{abstract}
+
+\section{Role, Scope, and Architecture}
+
+\subsection{What this paper proves}
+
+This manuscript proves a governance-level theorem. Its target question is narrow: given a reasoning system that already claims stable reference, persistent identity across inference, irreversible commitment, and consequential same-scope inferential use, what governance architecture is thereby forced? The answer defended here is that such a system must be AASC-class: it must enforce admissibility prior to standing-bearing commitment and premise-use, prohibit silent redescription and scope drift, and behave fail-closedly under violation.
+
+The paper is therefore a hinge result, but no longer a thin one. It does not attempt the full primitive non-derivability package, and it does not reproduce the downstream interface, trajectory, or Godel closure audits. Instead it derives the shortest same-scope governance theorem that those stronger papers presuppose: the kernel roles force a unique conservation-governed governance form.
+
+\subsection{What this paper does not prove}
+
+This paper does \emph{not} derive admissibility, standing, reference, or irreversibility from a weaker lower layer. It does not reproduce the AMetric boundary theorem, the trajectory theory, or the Godel non-instantiability theorem. And it does not claim that every formal calculus as such already satisfies its hypotheses. Its scope is restricted to systems that are actually used as same-scope standing-bearing reasoning regimes in the precise sense fixed below. A system that functions only as a trace-classifier is outside the target class and is not a counterexample.
+
+\subsection{Position in the larger architecture}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{0.18\textwidth}|p{0.34\textwidth}|p{0.34\textwidth}|}
+\hline
+\textbf{Layer} & \textbf{Primary job} & \textbf{Representative result} \\
+\hline
+Foundational closure & Show that admissibility, standing, reference, and irreversibility are necessary and non-derivable within the same meaningful regime. & Kernel inevitability and no faithful lower generator. \\
+\hline
+Bivalence / governance \textit{(this paper)} & Show what governance form is forced once those kernel roles are already in play, using standing conservation as the central same-scope invariant. & Non-degenerate reasoning forces AASC-class governance, and any same-scope governance package sufficient for such reasoning is lawfully equivalent to it. \\
+\hline
+Interface forcing & Derive the shape of the admissibility interface once governance is fixed. & AMetric boundary, bivalent interface, standing emergence, unique admissible interior. \\
+\hline
+Trajectory layer & Derive the path geometry of coherent reasoning under the fixed interface. & No deferred coherence; irrecoverability under extension. \\
+\hline
+Godel layer & Test the hardened regime against same-domain incompleteness objections. & Non-instantiability of a same-domain Godel threat in the unique admissible interior. \\
+\hline
+\end{tabular}
+\end{center}
+
+The present paper should therefore be read as the shortest conservation-driven projection of a globally closed architecture. Its role is not breadth but exact placement: it is the smallest theorem in the stack that turns kernel-level roles into mandatory same-scope governance form.
+
+\subsection{Roadmap}
+
+Section~2 fixes the exact target class and the minimal local setup. Section~3 proves the conservation spine: no same-act repair, prior gate necessity, fail-closed handling, no second same-scope admissibility invariant, and the standing-conservation law itself. Section~4 derives closure-relevance transmission, proves that same-scope governance work is exhausted by five loci, shows that the corresponding failure classes are exactly the conservation-violating projections of those loci, and proves that no sixth same-scope route remains. Section~5 derives the bivalence theorem proper, proves the converse realization theorem on the exact target class, seals the last local seam by proving that kernel-neutral governance difference is impossible, and concludes with strict bivalence and local closure of governance form. Section~6 records limits, a non-vacuity witness, and the falsification protocol. Appendix~A consolidates the Lean synchronization note with the hostile-referee audit apparatus.
+
+\begin{theorem}[Local Closure Sufficiency]
+\label{thm:localsuff}
+All results in this manuscript are derived from the local theorem chain consisting of the Standing Conservation Law, Closure-Relevance Transmission, Governance-Work Exhaustion, No Fourth Same-Scope Admissibility-Bearing Role, and No Second Same-Scope Admissibility Invariant. Stronger corpus results independently imply the same conclusions, but are not required for correctness here.
+\end{theorem}
+
+\begin{proof}
+Direct inspection of the proof order established in Sections~3--5 shows that the local results of the manuscript are derived from that chain together with the local setup of Section~2. The wider corpus supplies stronger independent support for the same conclusions, but no step of the present argument requires those stronger results as premises.
+\end{proof}
+
+\section{Setup: Systems, Uses, and Governance Terms}
+
+\subsection{Reasoning systems and same-scope inferential life}
+
+We work in classical logic. This is not to privilege classical truth values as such, but to ensure that contradiction does not trivialize reference or commitment. Alternative logics are admissible only insofar as they preserve the roles isolated below.
+
+\begin{definition}[Reasoning System]
+A \emph{reasoning system} is a tuple
+\[
+\mathcal{R} := (\mathcal{L},\mathcal{C},\vdash)
+\]
+where:
+\begin{itemize}
+\item $\mathcal{L}$ is a language of expressions,
+\item $\mathcal{C}$ is a commitment state (accepted claims, bound identities, scope declarations),
+\item $\vdash$ is an inference/update relation on $\mathcal{C}$.
+\end{itemize}
+No dynamics beyond inference are assumed.
+\end{definition}
+
+\begin{definition}[Same-Scope Inferential Life]
+\label{def:inferlife}
+For a fixed reasoning system, the \emph{same-scope inferential life} of a governance regime is the class of commitments, premise-uses, retentions, rejections, and same-scope continuations treated as licit under that regime.
+\end{definition}
+
+\begin{definition}[Governance-Bearing Non-Degenerate Use]
+\label{def:nondeguse}
+A reasoning system is \emph{used governance-bearingly and non-degenerately} iff its licit/unlicensed verdicts are used to govern same-scope commitment, premise-use, retention, or downstream reuse, and there exists at least one candidate commitment or premise-use whose admissible versus inadmissible treatment changes same-scope inferential life.
+\end{definition}
+
+\begin{proposition}[Trace-Classification Alone is Outside the Target Class]
+\label{prop:traceoutside}
+A formal calculus considered only as a derivation-checker for finite traces does not yet instantiate the object of study of this paper. It enters the target class only when its verdicts govern same-scope commitment, premise-use, retention, or reuse.
+\end{proposition}
+
+\begin{proof}
+A derivation-checker that classifies traces without governing same-scope commitment, premise-use, retention, or reuse leaves same-scope inferential life unchanged. By Definition~\ref{def:nondeguse}, such a system is not being used governance-bearingly or non-degenerately in the sense relevant here. It therefore does not instantiate the target class of the paper.
+\end{proof}
+
+\begin{proposition}[Governance-Bearing Use Induces a Licit/Unlicensed Partition]
+\label{prop:licitpartition}
+If a system's verdicts are used to govern same-scope commitment, premise-use, retention, or reuse, then those verdicts function as a genuine licit/unlicensed partition on standing-bearing use rather than as descriptive metadata about traces.
+\end{proposition}
+
+\begin{proof}
+Once a verdict determines what may be committed, used as a premise, retained, or reused on the same scope, it partitions those uses into licit and unlicensed classes. A verdict that made no such partition would leave same-scope inferential life unchanged and so would not be governance-bearing in the sense of Definition~\ref{def:nondeguse}.
+\end{proof}
+
+\subsection{Core local roles}
+
+The following are local input conditions for the present governance theorem. This paper does not derive them from a weaker layer; it proves what governance form they force once granted.
+
+\begin{axiom}[Reference]
+There exists a partial interpretation function
+\[
+\llbracket \cdot \rrbracket_{\mathcal{C}} : \mathcal{L} \rightharpoonup \mathcal{O}
+\]
+such that:
+\begin{enumerate}
+\item at least one expression has a defined denotation; and
+\item not all expressions denote the same trivial object.
+\end{enumerate}
+This excludes semantic collapse and vacuity.
+\end{axiom}
+
+\begin{axiom}[Standing]
+For any object $o$ introduced into $\mathcal{C}$, there exists an identity condition $Id(o)$ such that
+\[
+(\mathcal{C},o) \leadsto (\mathcal{C}',o) \implies Id_{\mathcal{C}}(o)=Id_{\mathcal{C}'}(o),
+\]
+across any licensed inference sequence, unless an explicit identity-reset operation is declared. Silent identity drift is prohibited.
+\end{axiom}
+
+\begin{axiom}[Irreversibility]
+There exists at least one commitment operation $Commit(\varphi)$ such that if
+\[
+\mathcal{C}' = Commit(\mathcal{C},\varphi),
+\]
+then there is no sequence of licensed inferences returning to a state $\mathcal{C}''$ for which
+\[
+\mathcal{C}'' \cong \mathcal{C}
+\]
+with reference and standing preserved. Commitment is not globally undoable.
+\end{axiom}
+
+\begin{definition}[Standing Status on Fixed Scope]
+\label{def:standingstatus}
+For a fixed same-scope governance regime and commitment state $\mathcal{C}$, an evaluated act $\varphi$ has positive standing, written $St_{\mathcal{C}}(\varphi)=1$, iff it is licensed for standing-bearing commitment, premise-use, and same-scope downstream reuse at $\mathcal{C}$. Otherwise $St_{\mathcal{C}}(\varphi)=0$. Undefinedness is treated fail-closedly and therefore counts as non-positive standing for same-scope governance purposes.
+\end{definition}
+
+\begin{definition}[Admissibility Gate]
+\label{def:gate}
+A system enforces an \emph{admissibility gate} iff there exists a predicate
+\[
+A(\varphi,\mathcal{C})
+\]
+such that:
+\begin{enumerate}
+\item only admissible expressions may be committed or used as premises:
+\[
+\mathcal{C}\vdash \varphi \Rightarrow A(\varphi,\mathcal{C}),
+\]
+\item $A$ blocks silent redescription, illicit scope transport, and post-hoc meaning repair.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Fail-Closed Governance]
+\label{def:failclosed}
+A system is \emph{fail-closed} iff any violation of admissibility, standing, or reference results in either explicit identity reset or termination of the reasoning path, and never in implicit repair.
+\end{definition}
+
+\begin{definition}[AASC-Class Governance]
+\label{def:aasc}
+A reasoning system is \emph{AASC-class} (\emph{Admissibility-and-Standing-Conservation class}) iff it enforces:
+\begin{enumerate}
+\item prior admissibility gating for standing-bearing commitment and premise-use,
+\item prohibition of silent redescription,
+\item scope/envelope integrity,
+\item fail-closed handling of violation.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Lawful Governance-Role Equivalence]
+\label{def:lawfulequiv}
+Two same-scope governance packages are \emph{lawfully equivalent at the governance-role level} iff they induce the same same-scope inferential life, the same prohibition of silent redescription and identity drift, the same scope/envelope integrity, and the same fail-closed versus explicit-reset handling of violations on the exact target class fixed here.
+\end{definition}
+
+\section{Standing Conservation as the Central Spine}
+
+\subsection{No repair and prior gate necessity}
+
+\begin{lemma}[No Same-Act Repair]
+\label{lem:norepair}
+In any same-scope regime satisfying Reference, Standing, and Irreversibility, no attempted repair of an act already evaluated as standing-negative can succeed while preserving that act as the same standing-bearing act.
+\end{lemma}
+
+\begin{proof}
+Assume a same-scope repair of an already evaluated standing-negative act succeeds.
+
+If it succeeds by reinterpretation, denotation changes, violating Reference. If it succeeds by identity drift, the target conditions of the act change while it is still treated as the same standing-bearing act, violating Standing. If it succeeds by effective commitment reversal, the earlier negative verdict is undone as if it had not bound the same act, violating Irreversibility. These cases exhaust same-scope repair routes. Therefore same-act repair is impossible.
+\end{proof}
+
+\begin{theorem}[Gate Necessity]
+\label{thm:gatenec}
+Let $\mathcal{R}$ be a reasoning system used governance-bearingly and non-degenerately. If $\mathcal{R}$ satisfies Reference, Standing, and Irreversibility, then positive standing must be fixed prior to standing-bearing commitment and premise-use. Equivalently, the regime must employ a prior admissibility gate in the sense of Definition~\ref{def:gate}.
+\end{theorem}
+
+\begin{proof}
+Assume, toward contradiction, that no prior admissibility gate exists. Then some act may be committed or used as a premise before its standing status is fixed.
+
+If that act is later treated as standing-positive while remaining the same act, then the regime has effected a same-act repair, contradicting Lemma~\ref{lem:norepair}. If the regime allows such acts to circulate without any principled distinction, then admissible versus inadmissible treatment makes no same-scope inferential difference, contradicting governance-bearing non-degenerate use. The only remaining possibility is that later standing is supplied by some additional same-scope authorizer not fixed in advance. But then positive standing is no longer determined by the act's own same-scope eligibility and the regime no longer has a determinate licit/unlicensed partition for commitment and premise-use. Therefore positive standing must be fixed prior to standing-bearing use. This is exactly a prior admissibility gate.
+\end{proof}
+
+\begin{corollary}[Fail-Closed Handling is Mandatory]
+\label{cor:failclosed}
+In a governance-bearing non-degenerate regime satisfying Reference, Standing, and Irreversibility, violations of admissibility cannot be handled by soft tolerance, downstream rehabilitation, or implicit reinterpretation. They must instead trigger termination of the reasoning path or explicit identity reset.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:gatenec}, positive standing must be fixed before standing-bearing use. Suppose a violation occurs and the regime neither terminates the path nor performs an explicit identity reset. If the violating act is later allowed to function standing-positively as the same act, that is same-act repair, contrary to Lemma~\ref{lem:norepair}. If the violation is simply tolerated while standing-bearing use continues unchanged, then the licit/unlicensed partition no longer governs same-scope inferential life, contradicting governance-bearing non-degenerate use. Hence fail-closed handling is mandatory.
+\end{proof}
+
+\subsection{No second invariant and no fourth role}
+
+\begin{theorem}[No Second Same-Scope Admissibility Invariant]
+\label{thm:nosecondinv}
+Let $I$ be any same-scope invariant claimed to bear admissibility authority in addition to the standing status fixed by the prior gate. Then exactly one of the following holds:
+\begin{enumerate}
+\item[(i)] $I$ is constant on the fibers of standing status and contributes only bookkeeping; or
+\item[(ii)] $I$ changes same-scope licit use, in which case it either induces a second gate on the positive side or opens a promotion/repair channel on the negative side.
+\end{enumerate}
+The second case collapses by Theorem~\ref{thm:gatenec}, Lemma~\ref{lem:norepair}, and Corollary~\ref{cor:failclosed}. Therefore, by those results, no second same-scope admissibility-bearing invariant exists.
+\end{theorem}
+
+\begin{proof}
+Assume $I$ is not constant on the fibers of standing status. Then there exist acts with the same standing status but different $I$-values.
+
+If those different $I$-values change no same-scope licit use, then $I$ is inferentially inert and therefore bookkeeping. Otherwise they do change same-scope licit use. If the acts were already standing-positive, the additional difference refines the positive side into a further admissibility-bearing partition and therefore functions as a second gate. If they were standing-negative, the additional difference makes one negative case more promotion-susceptible than another and therefore opens a repair/promotion channel. The second-gate branch violates the uniqueness of the licit/unlicensed partition fixed by Theorem~\ref{thm:gatenec}. The promotion branch violates Lemma~\ref{lem:norepair} and Corollary~\ref{cor:failclosed}. Hence the second case is impossible.
+\end{proof}
+
+\begin{theorem}[No Fourth Same-Scope Admissibility-Bearing Role]
+\label{thm:nofourthrole}
+Any same-scope admissibility-preserving role classification reduces to exactly three role-types:
+\begin{enumerate}
+\item[(i)] \emph{anchor}: preconditions of admissibility,
+\item[(ii)] \emph{tensor}: quotient-level invariant content preserved under lawful redescription and same-scope continuation,
+\item[(iii)] \emph{skin}: representational surplus with no effect on same-scope inferential life.
+\end{enumerate}
+There is no fourth same-scope admissibility-bearing role.
+\end{theorem}
+
+\begin{proof}
+Let $R$ be any purported same-scope role. If $R$ changes no same-scope inferential life, then it is representational surplus and therefore skin. Suppose instead that $R$ does change same-scope inferential life. Then either it does so by fixing or altering what counts as admissible in the first place, in which case it functions as a precondition of admissibility and is anchor-like, or it does so by preserving and transporting same-scope invariant content under lawful redescription and continuation, in which case it is tensor-like. By Theorem~\ref{thm:nosecondinv}, there is no additional same-scope admissibility-bearing invariant beyond the standing-bearing partition already fixed by the gate. Hence, by Theorem~\ref{thm:nosecondinv}, any purported fourth admissibility-bearing role collapses.
+\end{proof}
+
+\subsection{Standing conservation proper}
+
+\begin{theorem}[Standing Conservation Law]
+\label{thm:conservation}
+Under Reference, Standing, Irreversibility, governance-bearing non-degenerate use, prior admissibility gating, and fail-closed handling, same-scope governance admits neither standing sources nor same-act standing repairs. More precisely:
+\begin{enumerate}
+\item[(i)] no same-scope process can restore standing to an act already evaluated as standing-negative while preserving it as the same act;
+\item[(ii)] no same-scope act acquires standing-bearing authority without fresh prior gating on that act;
+\item[(iii)] no same-scope admissibility-bearing invariant can transfer or amplify standing-bearing authority beyond the unique licit/unlicensed partition.
+\end{enumerate}
+Equivalently, same-scope admissible evolution may preserve standing, explicitly reset identity, or lose standing by violation, but cannot create, restore, transfer, or amplify standing-bearing authority.
+\end{theorem}
+
+\begin{proof}
+Clause (i) is Lemma~\ref{lem:norepair}. For clause (ii), any act that acquires standing-bearing authority without fresh prior gating would constitute a standing source on the same scope. If it is the same act as an earlier standing-negative act, that is clause (i). If it is a distinct act, then by Theorem~\ref{thm:gatenec} its positive standing must still be fixed by prior gating for that act; otherwise the regime no longer has a determinate licit/unlicensed partition on same-scope commitment and premise-use.
+
+For clause (iii), suppose standing-bearing authority could be transferred or amplified beyond the unique licit/unlicensed partition. Then some same-scope admissibility-bearing invariant other than that partition would be doing standing-bearing work. But Theorem~\ref{thm:nosecondinv} excludes any second same-scope admissibility-bearing invariant. Therefore no transfer or amplification route remains.
+\end{proof}
+
+\begin{corollary}[No Generators]
+\label{cor:nogenerators}
+There is no same-scope operation that produces a standing-positive act from a standing-negative act as a consequence of the negative act alone and without fresh prior gating.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:conservation}(ii).
+\end{proof}
+
+\begin{corollary}[No Carriers]
+\label{cor:nocarriers}
+No scalar, probabilistic, structural, explanatory, or semantic carrier can function as an independent same-scope primitive authorizer of standing. Any admissible use of such a quantity is downstream bookkeeping inside an already gated envelope.
+\end{corollary}
+
+\begin{proof}
+An independent carrier would be a second same-scope admissibility-bearing invariant. That is excluded by Theorem~\ref{thm:nosecondinv}. Therefore any admissible use of such a quantity must be bookkeeping relative to the prior gate.
+\end{proof}
+
+\begin{theorem}[Inferential-Life Exhaustion on Fixed Scope]
+\label{thm:inferlifeexh}
+On the exact target class fixed here, same-scope inferential life is exhausted by two structures:
+\begin{enumerate}
+\item[(i)] standing classification of evaluated acts, and
+\item[(ii)] licensed same-scope continuation structure.
+\end{enumerate}
+No third inferential channel exists.
+\end{theorem}
+
+\begin{proof}
+By Definition~\ref{def:inferlife}, same-scope inferential life consists of what may be committed, rejected, retained, used as premise, and continued on the same scope. Standing classification fixes what is licit or unlicensed at the act level. Licensed continuation structure fixes what may be carried forward from those standing-bearing acts. All inferential operations reduce to commitment, reuse, or admissible continuation; each is governed entirely by standing classification or continuation structure under conservation. By Theorem~\ref{thm:nofourthrole}, no fourth admissibility-bearing role exists beyond the preconditions, invariant content, and non-authoritative skin of admissible description. By Theorem~\ref{thm:nosecondinv}, there is no second same-scope admissibility-bearing invariant that could carry a distinct inferential channel while leaving standing and continuation untouched. Therefore, by Theorems~\ref{thm:nofourthrole} and \ref{thm:nosecondinv}, any purported third inferential channel collapses.
+\end{proof}
+
+\begin{corollary}[Closure-Relevance Transmission]
+\label{cor:closuretrans}
+Any same-scope governance-relevant distinction must alter standing classification or licensed same-scope continuation structure. A distinction that changes neither is inferentially inert.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:inferlifeexh}.
+\end{proof}
+
+\section{Governance Work Exhaustion and Failure Families}
+
+\begin{definition}[Governance Loci of Same-Scope Departure]
+\label{def:loci}
+A same-scope governance package can differ from another only by changing one or more of the following loci:
+\begin{enumerate}
+\item[(L1)] verdict stability under lawful redescription,
+\item[(L2)] act identity persistence across inferential use,
+\item[(L3)] the temporal order between evaluation and standing-bearing use,
+\item[(L4)] reversibility versus non-repairability of commitment effects,
+\item[(L5)] scope or envelope integrity.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Same-Scope Governance Work is Exhausted by Five Loci]
+\label{thm:fivework}
+On the exact target class fixed in Section~2, governance work is exhausted by the five loci of Definition~\ref{def:loci}. There is no sixth same-scope governance route.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:closuretrans}, any governance-relevant same-scope distinction must alter standing classification or licensed continuation structure. To alter standing classification or licensed continuation, a governance package must change one or more of the following: what counts as the same standing-bearing content under redescription, what counts as the same act across use, when standing is fixed relative to use, whether same-scope negative verdicts are reversible, or which scope/envelope governs the act. These are exactly \textup{(L1)}--\textup{(L5)}.
+
+A purported sixth route would either carry no same-scope inferential effect, in which case it is inert by Corollary~\ref{cor:closuretrans}, or carry admissibility-bearing force outside anchors, tensor content, and skin, contradicting Theorem~\ref{thm:nofourthrole}, or rely on a second same-scope admissibility-bearing invariant, contradicting Theorem~\ref{thm:nosecondinv}. Hence, by Corollary~\ref{cor:closuretrans}, Theorem~\ref{thm:nofourthrole}, and Theorem~\ref{thm:nosecondinv}, any purported sixth route collapses.
+\end{proof}
+
+\begin{definition}[Failure Families]
+\label{def:failfam}
+The corresponding same-scope governance failure classes are:
+\begin{enumerate}
+\item[(F1)] \emph{silent redescription},
+\item[(F2)] \emph{identity drift},
+\item[(F3)] \emph{deferred validation},
+\item[(F4)] \emph{reversible commitment or post-hoc rehabilitation},
+\item[(F5)] \emph{scope or envelope drift}.
+\end{enumerate}
+These are the exact failure projections of loci \textup{(L1)}--\textup{(L5)} respectively.
+\end{definition}
+
+\begin{theorem}[Failure-Class Exhaustion from Standing Conservation]
+\label{thm:exhaust}
+Every same-scope governance departure from the standing-conserving regime instantiates at least one failure family \textup{(F1)}--\textup{(F5)}. There is no sixth same-scope failure route.
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal{G}$ and $\mathcal{G}'$ be same-scope governance packages that differ governance-relevantly. By Theorem~\ref{thm:fivework}, they differ at at least one governance locus. A deviation at \textup{(L1)} is silent redescription; at \textup{(L2)}, identity drift; at \textup{(L3)}, deferred validation; at \textup{(L4)}, reversible commitment or post-hoc rehabilitation; at \textup{(L5)}, scope or envelope drift. These are exactly the failure families \textup{(F1)}--\textup{(F5)}. Since Theorem~\ref{thm:fivework} also rules out a sixth governance locus, there is no sixth same-scope failure route.
+\end{proof}
+
+\begin{proposition}[Each Failure Family Violates a Kernel Role]
+\label{prop:failurekernel}
+Each failure family destroys at least one of Reference, Standing, or Irreversibility.
+\end{proposition}
+
+\begin{proof}
+\textup{(F1)} silent redescription violates Reference by changing admissible status through presentation. \textup{(F2)} identity drift violates Standing by changing the target conditions of the same act. \textup{(F3)} deferred validation violates the prior-fixation of standing required for standing-bearing use and therefore collapses the standing-bearing partition into later rehabilitation. \textup{(F4)} reversible commitment or post-hoc rehabilitation violates Irreversibility. \textup{(F5)} scope or envelope drift destroys either Reference or Standing by retyping the act's admissibility conditions after the fact.
+\end{proof}
+
+\begin{corollary}[No Soft Middle and No Sixth Route]
+\label{cor:nosoftmiddle}
+There is no same-scope governance middle state between the kernel roles and AASC-class governance. Any same-scope governance alternative either collapses into AASC-class governance or instantiates one of the failure families \textup{(F1)}--\textup{(F5)}.
+\end{corollary}
+
+\begin{proof}
+If the alternative is governance-relevant, Theorem~\ref{thm:exhaust} forces it into one of the failure families. If it avoids all failure families, then by Theorem~\ref{thm:fivework} it has no governance-relevant same-scope difference left and so collapses into the AASC-class regime.
+\end{proof}
+
+\section{Bivalence, AASC Necessity, and Local Closure}
+
+\begin{theorem}[Bivalence of Non-Degenerate Reasoning]
+\label{thm:bivalence}
+Let $\mathcal{R}$ be a reasoning system used governance-bearingly and non-degenerately. If $\mathcal{R}$ satisfies Reference, Standing, and Irreversibility, then $\mathcal{R}$ must be AASC-class.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:gatenec}, positive standing must be fixed prior to standing-bearing commitment and premise-use. By Corollary~\ref{cor:failclosed}, violations cannot be tolerated softly or rehabilitated implicitly. A regime that nevertheless permitted silent redescription, identity drift, or scope drift would instantiate one of the failure families \textup{(F1)}, \textup{(F2)}, or \textup{(F5)} and so violate a kernel role by Proposition~\ref{prop:failurekernel}. A regime that permitted post-hoc rehabilitation or effective reversibility would instantiate \textup{(F4)} and violate Irreversibility. Therefore the regime must enforce prior admissibility gating, prohibit silent redescription, preserve scope/envelope integrity, and behave fail-closedly on violation. That is exactly AASC-class governance.
+\end{proof}
+
+\begin{theorem}[AASC-Class Closure-Relevance Realization]
+\label{thm:aascrealization}
+Let $\mathcal{R}$ be a reasoning system used governance-bearingly and non-degenerately on the exact target class fixed here. If its same-scope governance package is AASC-class, then that package realizes Reference, Standing, and Irreversibility locally.
+\end{theorem}
+
+\begin{proof}
+Because the package is AASC-class, positive standing is fixed prior to standing-bearing commitment and premise-use. Thus the licit/unlicensed partition is already fixed before same-scope inferential uptake. Prohibition of silent redescription excludes presentation-driven alteration of standing-bearing content and therefore realizes local reference stability. Scope/envelope integrity excludes hidden retagging of admissibility conditions and thereby preserves same-scope act identity across use. Fail-closed handling excludes same-act rehabilitation and therefore realizes local non-repairability of standing-negative acts.
+
+Suppose nevertheless that one of the kernel roles failed locally. If Reference failed, the difference would have to survive as a governance-relevant same-scope distinction in content-preservation or uptake and therefore alter standing classification or continuation structure by Corollary~\ref{cor:closuretrans}. If Standing failed, same-act identity across use would drift and hence instantiate failure family \textup{(F2)}. If Irreversibility failed, same-scope rehabilitation would occur and hence instantiate failure family \textup{(F4)}. In every case the purported failure either contradicts the AASC clauses directly or reappears as a failure-family route forbidden by Corollary~\ref{cor:nosoftmiddle}. Therefore AASC-class governance realizes the kernel roles locally on the exact target class of this paper.
+\end{proof}
+
+\begin{theorem}[Kernel-Neutral Governance Difference is Impossible]
+\label{thm:nokernelneutral}
+Let $\mathcal{G}$ and $\mathcal{G}'$ be same-scope governance packages on the exact target class fixed here. If they differ governance-relevantly, then the difference either:
+\begin{enumerate}
+\item[(i)] alters standing classification or licensed same-scope continuation, or
+\item[(ii)] instantiates one of the failure families \textup{(F1)}--\textup{(F5)}.
+\end{enumerate}
+No governance-relevant same-scope difference can remain neutral with respect to the kernel roles.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:closuretrans}, any governance-relevant same-scope distinction must alter standing classification or licensed continuation unless it is inert. By Theorem~\ref{thm:fivework}, any such same-scope governance difference must occur at one or more of the five governance loci. By Theorem~\ref{thm:exhaust}, those loci project exactly to failure families \textup{(F1)}--\textup{(F5)}. Therefore any governance-relevant same-scope difference either directly alters standing classification or continuation, or else instantiates a failure family. Since each failure family destroys at least one kernel role by Proposition~\ref{prop:failurekernel}, no governance-relevant difference is kernel-neutral.
+\end{proof}
+
+\begin{theorem}[Local Closure of Governance Form]
+\label{thm:localclosure}
+Let $\mathcal{G}$ be any same-scope governance package on the exact target class fixed here. If $\mathcal{G}$ is sufficient for governance-bearing non-degenerate reasoning while preserving Reference, Standing, and Irreversibility, then $\mathcal{G}$ is lawfully equivalent at the governance-role level to AASC-class governance.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:bivalence}, any same-scope governance package sufficient for governance-bearing non-degenerate reasoning while preserving the kernel roles must be AASC-class. Suppose nevertheless that $\mathcal{G}$ were not lawfully equivalent to AASC-class governance. Then the two packages would differ governance-relevantly. By Theorem~\ref{thm:nokernelneutral}, that difference would either alter standing classification or licensed continuation, or instantiate a failure family. In the first case, the packages would not preserve the same kernel-governed same-scope inferential life. In the second case, at least one kernel role would be destroyed by Proposition~\ref{prop:failurekernel}. Both contradict the hypothesis that $\mathcal{G}$ is sufficient for governance-bearing non-degenerate reasoning while preserving Reference, Standing, and Irreversibility. Therefore no governance-relevant difference remains, and $\mathcal{G}$ is lawfully equivalent to AASC-class governance.
+\end{proof}
+
+\begin{corollary}[Strict Bivalence and No Intermediate Same-Scope Governance]
+\label{cor:strictbiv}
+On the exact target class fixed here, the same-scope governance packages sufficient for governance-bearing non-degenerate reasoning are exactly the AASC-class packages up to lawful governance-role equivalence. There is no intermediate same-scope governance state between the kernel roles and AASC-class governance.
+\end{corollary}
+
+\begin{proof}
+The forward direction is Theorem~\ref{thm:bivalence}. The converse local realization of the kernel roles is Theorem~\ref{thm:aascrealization}. Local closure is Theorem~\ref{thm:localclosure}. Together they show that, on the exact target class fixed here, the governance packages sufficient for non-degenerate reasoning are exactly the AASC-class packages up to lawful governance-role equivalence, with no same-scope middle state.
+\end{proof}
+
+\begin{remark}[Extensional Status of AASC-Class Governance]
+\label{rem:aascextensional}
+AASC-class governance is introduced clause-wise in Definition~\ref{def:aasc}. On the exact target class fixed here, it is also determined extensionally: by Theorem~\ref{thm:bivalence}, Theorem~\ref{thm:aascrealization}, and Theorem~\ref{thm:localclosure}, AASC-class governance is exactly the unique same-scope governance structure sufficient for governance-bearing non-degenerate reasoning up to lawful governance-role equivalence. The clause-based definition and the extensional uniqueness claim therefore coincide on the target class.
+\end{remark}
+
+\section{Relation to the Stack, Witness, and Limits}
+
+This paper is now best read as a conservation-driven projection of the wider closure architecture. The foundational closure paper proves that admissibility, standing, reference, and irreversibility are necessary and non-derivable within the same meaningful regime. The interface papers prove that once that governance floor is fixed, the admissibility boundary is AMetric and non-parameterized, the evaluated interface is bivalent, standing is reuse-stable admissibility, and the admissible interior is unique. The trajectory paper proves irrecoverability under same-scope continuation. The Godel paper proves that even same-domain incompleteness routes cannot reopen the regime. The present manuscript does not reproduce those larger proof packages. It proves the shortest conservation-governed theorem that connects them: on the exact target class fixed here, the governance form preserving the kernel is unique up to lawful equivalence.
+
+\begin{proposition}[Illustrative Non-Vacuity Witness]
+\label{prop:witness}
+A typed proof regime whose licit/unlicensed verdicts are actually used to govern theorem deployment, premise-use, retention, and same-scope downstream reuse lies within the target class fixed in Section~2.
+\end{proposition}
+
+\begin{proof}
+Such a regime is not merely a trace-classifier by Proposition~\ref{prop:traceoutside}. Its verdicts govern same-scope inferential life and therefore realize a genuine licit/unlicensed partition by Proposition~\ref{prop:licitpartition}. If, in addition, the regime preserves stable denotation across same-scope use, bars silent identity drift, and treats illicit verdicts fail-closedly rather than by same-act repair, then it satisfies the exact target-class conditions under which the theorems of Sections~3--5 are stated.
+\end{proof}
+
+\begin{remark}[Scope of the Result]
+This theorem applies only to reasoning systems that claim persistent identity, stable reference, irreversible commitment, and consequential same-scope inferential use. Fragmentary, hypothetical, or merely trace-checking systems that abandon one or more of those roles are outside the target class and are not counterexamples.
+\end{remark}
+
+\begin{remark}[Non-Claims]
+The paper does not claim that every formal calculus as such is already AASC-class. It does not derive the kernel from a weaker lower basis. It does not reproduce the AMetric, trajectory, or Godel proof packages. And it does not state a universal anti-formal-systems theorem. Its claim is narrower and governance-level: within the exact target class fixed in Section~2, the kernel roles force standing-conserving AASC-class governance and leave no same-scope intermediate governance option.
+\end{remark}
+
+\begin{remark}[Falsification Protocol]
+A genuine counterexample must exhibit a same-scope reasoning regime that preserves Reference, Standing, Irreversibility, and governance-bearing non-degenerate use while also relaxing prior admissibility gating, the prohibition of silent redescription and scope drift, or fail-closed handling without falling into any of the failure families of Definition~\ref{def:failfam}. Merely citing a formal calculus with derivation-checkability, a fragmentary hypothetical system, or a scope-changing extension does not meet that burden.
+\end{remark}
+
+\appendix
+
+\section{Formalization Synchronization and Hostile-Referee Audit}
+
+This appendix serves two jobs. First, it records the paper-facing Lean4 synchronization target for the local theorem ladder proved here. Second, it installs the compact hostile-referee apparatus appropriate to a short hinge manuscript. The appendix is documentary and audit-facing rather than load-bearing. Its purpose is not to transfer proof burden to Lean, but to freeze the intended theorem ladder and its relation to the wider closure architecture against later drift. The synchronization targets below are documentary theorem-family alignment devices and do not transfer proof burden from the manuscript to an external formalization.
+
+\subsection*{Synchronization note}
+
+A faithful Lean4 development of this paper may be organized in either of two ways.
+\begin{enumerate}
+\item \textbf{Direct local encoding.} Encode exactly the local setup used in this paper and prove the local theorem ladder directly from that setup.
+\item \textbf{Synchronized corpus encoding.} Import a stronger already certified primitive/interface/trajectory floor and derive the theorem ladder of this paper as a downstream specialization.
+\end{enumerate}
+
+The logical status of the manuscript is unchanged in either case. The body of the paper proves its governance results locally; importing a stronger floor in Lean should be read as synchronization rather than as outsourced mathematical proof.
+
+\subsection*{Paper-facing theorem targets}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{0.33\textwidth}|p{0.32\textwidth}|p{0.22\textwidth}|}
+\hline
+\textbf{Manuscript result} & \textbf{Paper-facing Lean4 target} & \textbf{Status} \\
+\hline
+Lemma~\ref{lem:norepair} & \texttt{PaperNoSameActRepairStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:gatenec} & \texttt{PaperGateNecessityStatement} & Documentary target \\
+\hline
+Corollary~\ref{cor:failclosed} & \texttt{PaperFailClosedGovernanceStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:conservation} & \texttt{PaperStandingConservationStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:inferlifeexh} and Corollary~\ref{cor:closuretrans} & \texttt{PaperInferentialLifeExhaustionStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:nosecondinv} & \texttt{PaperNoSecondAdmissibilityInvariantStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:nofourthrole} & \texttt{PaperNoFourthAdmissibilityRoleStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:fivework} and Theorem~\ref{thm:exhaust} & \texttt{PaperGovernanceExhaustionStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:bivalence} & \texttt{PaperBivalenceOfNonDegenerateReasoningStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:aascrealization} & \texttt{PaperAASCRealizationStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:nokernelneutral} & \texttt{PaperNoKernelNeutralGovernanceDifferenceStatement} & Documentary target \\
+\hline
+Theorem~\ref{thm:localclosure} and Corollary~\ref{cor:strictbiv} & \texttt{PaperLocalClosureOfGovernanceFormStatement} & Documentary target \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Hostile-referee map}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{0.30\textwidth}|p{0.26\textwidth}|p{0.29\textwidth}|}
+\hline
+\textbf{Standard objection or escape attempt} & \textbf{Theorem seam targeted} & \textbf{What the referee would actually have to show} \\
+\hline
+``This is definitional: you built the conclusion into AASC-class governance.'' & Conservation / gate-necessity seam & A same-scope regime preserving Reference, Standing, and Irreversibility while avoiding Lemma~\ref{lem:norepair}, Theorem~\ref{thm:gatenec}, and Theorem~\ref{thm:conservation}. \\
+\hline
+``There is a softer same-scope middle regime.'' & Governance-exhaustion seam & A same-scope governance route outside Theorem~\ref{thm:fivework} and Theorem~\ref{thm:exhaust} that still changes inferential life. \\
+\hline
+``A second admissibility-bearing invariant survives on the same scope.'' & Invariant seam & A same-scope invariant that changes licit use without becoming bookkeeping, a second gate, or a repair/promotion channel, contrary to Theorem~\ref{thm:nosecondinv}. \\
+\hline
+``There is a fourth admissibility-bearing role.'' & Role-decomposition seam & A same-scope role that changes inferential life while being neither anchor, tensor, nor skin, contrary to Theorem~\ref{thm:nofourthrole}. \\
+\hline
+``AASC-class governance need not realize the kernel roles locally.'' & Reverse-direction seam & A governance-bearing AASC regime whose same-scope use still fails Reference, Standing, or Irreversibility without instantiating any failure family, contrary to Theorem~\ref{thm:aascrealization}. \\
+\hline
+``A distinct same-scope governance package could preserve the kernel while differing from AASC-class governance.'' & Local-closure seam & A governance-relevant same-scope difference that avoids standing/continuation change and all failure families, contrary to Theorem~\ref{thm:nokernelneutral} and Theorem~\ref{thm:localclosure}. \\
+\hline
+``Ordinary formal calculi are counterexamples because they are mechanically checkable.'' & Scope seam & A calculus used only as a trace-classifier that nonetheless already governs same-scope commitment, premise-use, retention, or reuse in the sense required by Definition~\ref{def:nondeguse}, thereby falsifying Proposition~\ref{prop:traceoutside}. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Shortest theorem-only reading path}
+After reading the setup assumptions in Section~2, a hostile referee who wants the shortest verification route can read the theorem ladder in the following order:
+\begin{enumerate}
+\item Lemma~\ref{lem:norepair};
+\item Theorem~\ref{thm:gatenec};
+\item Corollary~\ref{cor:failclosed};
+\item Theorem~\ref{thm:nosecondinv};
+\item Theorem~\ref{thm:nofourthrole};
+\item Theorem~\ref{thm:conservation};
+\item Theorem~\ref{thm:inferlifeexh};
+\item Corollary~\ref{cor:closuretrans};
+\item Theorem~\ref{thm:fivework};
+\item Theorem~\ref{thm:exhaust};
+\item Proposition~\ref{prop:failurekernel};
+\item Corollary~\ref{cor:nosoftmiddle};
+\item Theorem~\ref{thm:bivalence};
+\item Theorem~\ref{thm:aascrealization};
+\item Theorem~\ref{thm:nokernelneutral}; and
+\item Theorem~\ref{thm:localclosure} together with Corollary~\ref{cor:strictbiv}.
+\end{enumerate}
+
+That route is enough to force any remaining disagreement onto a specific theorem rather than onto a general impression that the paper is rhetorical.
+
+\end{document}

@@ -1,0 +1,7 @@
+name = "BivalenceNonDegenerateReasoning"
+version = "0.1.0"
+defaultTargets = ["MaleyLean"]
+
+[[lean_lib]]
+name = "MaleyLean"
+root = "Main"
