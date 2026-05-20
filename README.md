@@ -4,6 +4,7 @@ Lean 4 formalization repository for the AASC paper family.
 
 This repository currently contains paper-facing formalizations for:
 
+- `Minimal Conditions for Admissible Construction`
 - `The Bivalence Theorem for Non-Degenerate Reasoning`
 - `Claim Standing and Legitimacy: A Universal Audit Protocol for Laundering Exclusion and Reportable Output`
 - a small formalization smoke-test module
@@ -15,6 +16,29 @@ primitives have not yet been found; it is that standing, legitimacy,
 admissibility, reference, and irreversibility cannot be derived from a weaker
 same-scope substrate without changing the target class into trace
 classification or bookkeeping.
+
+## Minimal Conditions for Admissible Construction
+
+The `Minimal Conditions for Admissible Construction` development is the kernel
+paper for the repository. It formalizes the fixed-domain uniqueness result for
+the admissibility kernel: admissibility, standing, reference, and irreversibility
+are the non-lowerable governance roles for identity-preserving construction.
+Nothing same-domain and governance-equivalent can be derived beneath that
+kernel; any faithful candidate either carries the kernel already, changes
+domain, loses the target phenomenon, imports selector structure, or collapses
+to bookkeeping.
+
+The paper-facing files are:
+
+- `MaleyLean/Papers/MinimalConditionsForAdmissibleConstruction/PaperStatements.lean`
+- `MaleyLean/Papers/MinimalConditionsForAdmissibleConstruction/Surface/Summary.lean`
+- `MaleyLean/Papers/MinimalConditionsForAdmissibleConstruction/Verbatim/TheoremRegister.lean`
+- `Checks/Axiom/MinimalConditionsForAdmissibleConstructionAxiomCheck.lean`
+
+The preferred human-readable summary exports are:
+
+- `MaleyLean.Papers.MinimalConditionsForAdmissibleConstruction.Surface.SummaryStatement`
+- `MaleyLean.Papers.MinimalConditionsForAdmissibleConstruction.Surface.BivalenceBridgeSummaryStatement`
 
 ## Claim Standing and Legitimacy
 
@@ -90,6 +114,12 @@ Bivalence:
 
 ```powershell
 lake env lean Checks\Axiom\BivalenceNonDegenerateReasoningAxiomCheck.lean
+```
+
+Minimal Conditions for Admissible Construction:
+
+```powershell
+lake env lean Checks\Axiom\MinimalConditionsForAdmissibleConstructionAxiomCheck.lean
 ```
 
 The current `Claim Standing and Legitimacy` paper-facing theorem surface is
