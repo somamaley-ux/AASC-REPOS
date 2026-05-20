@@ -1,0 +1,11 @@
+import MaleyLean.Papers.FormalizationSmokeTest.PaperStatements
+import MaleyLean.Papers.FormalizationSmokeTest.Surface.Summary
+
+namespace MaleyLean
+
+#print axioms Papers.FormalizationSmokeTest.PaperNoSameActRepairStatement
+#print axioms Papers.FormalizationSmokeTest.PaperLocalStabilityStatement
+#print axioms Papers.FormalizationSmokeTest.PaperSmokeTestCoreStatement
+#print axioms Papers.FormalizationSmokeTest.Surface.SummaryStatement
+
+end MaleyLean
