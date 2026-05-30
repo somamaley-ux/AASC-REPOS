@@ -74,6 +74,34 @@ remaining_clay_object_from_canonical_selector_fixedness
 This localizes the new-territory proof target: construct
 `CanonicalSelectorFixednessSubobligation` without assuming RH.
 
+## Illicit Standing-Collapse Extrapolation
+
+The release also records the corpus-style extrapolation from illicit
+selector/notation collapse:
+
+```lean
+IllicitStandingCollapseExtrapolation
+```
+
+Its two substantive fields are:
+
+```lean
+off_line_selector_is_illicit
+illicit_selector_collapses_standing
+```
+
+Lean proves that this certificate implies the hard selector-fixedness
+sub-obligation, the remaining Clay-level object, and mathlib RH:
+
+```lean
+canonical_selector_fixedness_from_illicit_standing_collapse
+remaining_clay_object_from_illicit_standing_collapse
+mathlib_riemannHypothesis_from_illicit_standing_collapse
+```
+
+This is still conditional: the zeta-specific task is to instantiate those two
+fields without assuming RH.
+
 ## Important Scope Statement
 
 This release does not claim an unconditional completed proof of RH.  It proves:

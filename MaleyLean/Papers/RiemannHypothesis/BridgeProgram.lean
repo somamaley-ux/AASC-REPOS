@@ -95,6 +95,56 @@ theorem remaining_clay_object_from_canonical_selector_fixedness
     RemainingClayLevelProofObject := by
   exact ⟨classicalZetaBridgeObligations_from_canonical_selector_fixedness hfixed⟩
 
+/--
+Logical extrapolation from the corpus pattern "illicit selector / notation /
+coordinate move collapses standing".
+
+The predicate `IllicitSelector` is intentionally left explicit.  A use of this
+certificate must prove that the concrete off-line zeta selector is illicit; it
+does not get that fact for free from the generic AASC collapse pattern.
+-/
+structure IllicitStandingCollapseExtrapolation where
+  IllicitSelector : ℂ -> Prop
+  off_line_selector_is_illicit :
+    forall s : ℂ,
+      classicalZetaZerohoodStanding s ->
+      s.re ≠ 1 / 2 ->
+      IllicitSelector s
+  illicit_selector_collapses_standing :
+    forall s : ℂ,
+      classicalZetaZerohoodStanding s ->
+      IllicitSelector s ->
+      False
+
+/--
+The generic standing-collapse extrapolation supplies the hard canonical
+selector-fixedness sub-obligation.  Proof idea: if a standing zero were selected
+off-line, the selector would be illicit; illicit selected standing collapses;
+therefore the off-line assumption is impossible.
+-/
+theorem canonical_selector_fixedness_from_illicit_standing_collapse
+    (C : IllicitStandingCollapseExtrapolation) :
+    CanonicalSelectorFixednessSubobligation := by
+  intro s hstanding hselector
+  by_contra hoff
+  have hillicit : C.IllicitSelector s :=
+    C.off_line_selector_is_illicit s hstanding hoff
+  exact C.illicit_selector_collapses_standing s hstanding hillicit
+
+theorem remaining_clay_object_from_illicit_standing_collapse
+    (C : IllicitStandingCollapseExtrapolation) :
+    RemainingClayLevelProofObject := by
+  exact
+    remaining_clay_object_from_canonical_selector_fixedness
+      (canonical_selector_fixedness_from_illicit_standing_collapse C)
+
+theorem mathlib_riemannHypothesis_from_illicit_standing_collapse
+    (C : IllicitStandingCollapseExtrapolation) :
+    RiemannHypothesis := by
+  exact
+    mathlib_riemannHypothesis_from_remaining_clay_object
+      (remaining_clay_object_from_illicit_standing_collapse C)
+
 end
 
 end RiemannHypothesis

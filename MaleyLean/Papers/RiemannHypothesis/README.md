@@ -82,6 +82,31 @@ If supplied, it constructs the remaining object:
 remaining_clay_object_from_canonical_selector_fixedness
 ```
 
+The corpus-style standing-collapse extrapolation is isolated as:
+
+```lean
+IllicitStandingCollapseExtrapolation
+```
+
+It has two substantive fields:
+
+```lean
+off_line_selector_is_illicit
+illicit_selector_collapses_standing
+```
+
+From those fields Lean proves:
+
+```lean
+canonical_selector_fixedness_from_illicit_standing_collapse
+remaining_clay_object_from_illicit_standing_collapse
+mathlib_riemannHypothesis_from_illicit_standing_collapse
+```
+
+This is the formal logical extrapolation from the corpus pattern: illicit
+coordinate/selector moves collapse standing.  The still-live proof burden is
+to justify the two fields for classical zeta without assuming RH.
+
 The structural AASC endpoint proved from an explicit certificate is:
 
 ```lean

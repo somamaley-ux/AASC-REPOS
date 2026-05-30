@@ -433,6 +433,32 @@ that sub-obligation is supplied, Lean constructs the remaining object via:
 \texttt{remaining\_clay\_object\_from\_canonical\_selector\_fixedness}.
 \]
 
+The corpus-style extrapolation from illicit selector collapse is formalized as:
+\[
+\texttt{IllicitStandingCollapseExtrapolation}.
+\]
+Its two substantive fields are:
+\[
+\texttt{off\_line\_selector\_is\_illicit}
+\quad\text{and}\quad
+\texttt{illicit\_selector\_collapses\_standing}.
+\]
+Lean proves:
+\[
+\texttt{canonical\_selector\_fixedness\_from\_illicit\_standing\_collapse},
+\]
+\[
+\texttt{remaining\_clay\_object\_from\_illicit\_standing\_collapse},
+\]
+and
+\[
+\texttt{mathlib\_riemannHypothesis\_from\_illicit\_standing\_collapse}.
+\]
+This is the formal logical extrapolation from the matrix pattern that illicit
+coordinate/selector moves collapse standing.  The remaining zeta-specific task
+is to prove those two fields for the classical off-line selector without
+assuming RH.
+
 Once the endpoint is established from that object and read through canonical
 standing-as-zerohood, Lean proves it is exactly equivalent to the classical RH
 statement.
@@ -549,6 +575,14 @@ Hard sub-obligation iff RH
   & \texttt{canonical\_selector\_fixedness\_iff\_mathlib\_riemannHypothesis} \\
 Remaining object from hard sub-obligation
   & \texttt{remaining\_clay\_object\_from\_canonical\_selector\_fixedness} \\
+Illicit standing-collapse extrapolation
+  & \texttt{IllicitStandingCollapseExtrapolation} \\
+Hard sub-obligation from illicit collapse
+  & \texttt{canonical\_selector\_fixedness\_from\_illicit\_standing\_collapse} \\
+Remaining object from illicit collapse
+  & \texttt{remaining\_clay\_object\_from\_illicit\_standing\_collapse} \\
+RH from illicit collapse
+  & \texttt{mathlib\_riemannHypothesis\_from\_illicit\_standing\_collapse} \\
 Classical mathlib RH from certificate
   & \texttt{mathlib\_riemannHypothesis\_from\_kernel\_certificate} \\
 Shortcut audit: critical-line standing equals RH bridge
