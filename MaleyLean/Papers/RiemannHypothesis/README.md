@@ -40,6 +40,48 @@ remaining_clay_object_iff_mathlib_riemannHypothesis
 This means the remaining certificate is exactly RH-strength.  It has not been
 constructed unconditionally in this repository.
 
+## Zeta-Specific Bridge Workbench
+
+The file:
+
+```text
+MaleyLean/Papers/RiemannHypothesis/BridgeProgram.lean
+```
+
+defines the canonical off-line selector:
+
+```lean
+canonicalOffLineHorizontalSelector
+```
+
+and the canonical fixed-by-invariant-bundle predicate:
+
+```lean
+canonicalCriticalLineFixedByInvariantBundle
+```
+
+The exact hard sub-obligation is:
+
+```lean
+CanonicalSelectorFixednessSubobligation
+```
+
+Lean proves:
+
+```lean
+canonical_selector_fixedness_iff_mathlib_riemannHypothesis
+```
+
+So the next proof target is not merely more generic AASC support.  It is the
+zeta-specific theorem that any standing-bearing off-line selected zero is
+already invariant-fixed.  That theorem is exactly RH-strength.
+
+If supplied, it constructs the remaining object:
+
+```lean
+remaining_clay_object_from_canonical_selector_fixedness
+```
+
 The structural AASC endpoint proved from an explicit certificate is:
 
 ```lean

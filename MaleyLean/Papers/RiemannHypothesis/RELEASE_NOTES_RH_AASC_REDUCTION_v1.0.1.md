@@ -48,6 +48,32 @@ Therefore Lean proves the audit theorem:
 remaining_clay_object_iff_mathlib_riemannHypothesis
 ```
 
+## Zeta-Specific Bridge Workbench
+
+The release now includes:
+
+```text
+MaleyLean/Papers/RiemannHypothesis/BridgeProgram.lean
+```
+
+It defines:
+
+```lean
+canonicalOffLineHorizontalSelector
+canonicalCriticalLineFixedByInvariantBundle
+CanonicalSelectorFixednessSubobligation
+```
+
+and proves:
+
+```lean
+canonical_selector_fixedness_iff_mathlib_riemannHypothesis
+remaining_clay_object_from_canonical_selector_fixedness
+```
+
+This localizes the new-territory proof target: construct
+`CanonicalSelectorFixednessSubobligation` without assuming RH.
+
 ## Important Scope Statement
 
 This release does not claim an unconditional completed proof of RH.  It proves:

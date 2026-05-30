@@ -405,6 +405,34 @@ Thus the exact audit theorem is:
 \]
 This does not construct the remaining object unconditionally; it shows that
 the remaining certificate is exactly RH-strength.
+
+The zeta-specific construction has now been decomposed further in
+\[
+\texttt{BridgeProgram.lean}.
+\]
+There the canonical off-line selector is:
+\[
+\texttt{canonicalOffLineHorizontalSelector}.
+\]
+The canonical invariant-fixed predicate is:
+\[
+\texttt{canonicalCriticalLineFixedByInvariantBundle}.
+\]
+The exact hard sub-obligation is:
+\[
+\texttt{CanonicalSelectorFixednessSubobligation}.
+\]
+Lean proves:
+\[
+\texttt{canonical\_selector\_fixedness\_iff\_mathlib\_riemannHypothesis}.
+\]
+Thus the next proof target is sharply localized: a zeta-specific theorem that
+standing-bearing off-line selected zerohood is already invariant-fixed.  If
+that sub-obligation is supplied, Lean constructs the remaining object via:
+\[
+\texttt{remaining\_clay\_object\_from\_canonical\_selector\_fixedness}.
+\]
+
 Once the endpoint is established from that object and read through canonical
 standing-as-zerohood, Lean proves it is exactly equivalent to the classical RH
 statement.
@@ -513,6 +541,14 @@ Remaining proof object from RH
   & \texttt{remaining\_clay\_object\_from\_mathlib\_riemannHypothesis} \\
 Remaining proof object iff RH
   & \texttt{remaining\_clay\_object\_iff\_mathlib\_riemannHypothesis} \\
+Canonical off-line selector
+  & \texttt{canonicalOffLineHorizontalSelector} \\
+Hard selector fixedness sub-obligation
+  & \texttt{CanonicalSelectorFixednessSubobligation} \\
+Hard sub-obligation iff RH
+  & \texttt{canonical\_selector\_fixedness\_iff\_mathlib\_riemannHypothesis} \\
+Remaining object from hard sub-obligation
+  & \texttt{remaining\_clay\_object\_from\_canonical\_selector\_fixedness} \\
 Classical mathlib RH from certificate
   & \texttt{mathlib\_riemannHypothesis\_from\_kernel\_certificate} \\
 Shortcut audit: critical-line standing equals RH bridge
