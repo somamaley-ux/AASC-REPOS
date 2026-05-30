@@ -1,11 +1,30 @@
-# Riemann Hypothesis AASC/Lean Handoff
+# Riemann Hypothesis AASC/Lean Reduction Handoff
 
 This folder contains the AASC-native zero-interior rigidity development for
 the Riemann zeta interface.
 
 ## Strongest Formal Framing
 
-The Lean development proves the AASC structural endpoint:
+The Lean development gives a Lean-verified AASC-native reduction of RH to the
+explicit construction of the zeta-specific selector/kernel certificate:
+
+```lean
+Nonempty ClassicalRiemannZetaBridgeObligations
+```
+
+Equivalently, the remaining proof object is named:
+
+```lean
+RemainingClayLevelProofObject
+```
+
+From that object, Lean proves:
+
+```lean
+mathlib_riemannHypothesis_from_remaining_clay_object
+```
+
+The structural AASC endpoint proved from an explicit certificate is:
 
 ```lean
 aasc_standing_zero_interior_rigidity
@@ -36,7 +55,21 @@ The bridge theorem is definitional:
 ```
 
 Therefore the AASC endpoint for canonical standing-as-zerohood is formally
-equivalent to mathlib's `RiemannHypothesis`.
+equivalent to mathlib's `RiemannHypothesis`.  This is an equivalence/reduction
+statement, not an unconditional construction of the zeta-specific certificate.
+
+## Remaining Proof Object
+
+The repository does not yet construct:
+
+```lean
+Nonempty ClassicalRiemannZetaBridgeObligations
+```
+
+That is the remaining Clay-level proof object.  The discharged
+standing/zerohood bridge proves there is no critical-line smuggling in the
+comparison with classical zerohood; it does not by itself provide the
+zeta-specific selector/kernel certificate.
 
 ## Referee Print Packet
 

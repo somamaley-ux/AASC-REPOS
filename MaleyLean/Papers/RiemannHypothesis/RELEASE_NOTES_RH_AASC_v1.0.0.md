@@ -1,7 +1,7 @@
-# RH AASC Zerohood Bridge v1.0.0
+# RH AASC Zerohood Reduction v1.0.0
 
 Release target for Zenodo archival of the Riemann Hypothesis AASC/Lean
-handoff package.
+reduction handoff package.
 
 ## Citation Target
 
@@ -19,8 +19,20 @@ https://github.com/somamaley-ux/AASC-REPOS/tree/main/MaleyLean/Papers/RiemannHyp
 
 ## Formal Result Framing
 
-This release contains the AASC-native zero-interior rigidity development for
-the Riemann zeta interface, including:
+This release contains a Lean-verified AASC-native reduction of RH to the
+explicit construction of:
+
+```lean
+Nonempty ClassicalRiemannZetaBridgeObligations
+```
+
+Equivalently, this is named:
+
+```lean
+RemainingClayLevelProofObject
+```
+
+The release includes:
 
 - framework-internality for non-degenerate standing-bearing proof regimes;
 - AASC kernel-role instantiation for the zeta interface;
@@ -29,7 +41,11 @@ the Riemann zeta interface, including:
 - canonical standing-as-zerohood bridge for mathlib's `riemannZeta`;
 - formal equivalence between the canonical AASC endpoint and mathlib's
   `RiemannHypothesis`;
-- hostile-referee print packet with exact Lean output.
+- hostile-referee print packet with exact Lean output;
+- explicit reduction theorem from the remaining object to mathlib RH.
+
+It does not claim that `Nonempty ClassicalRiemannZetaBridgeObligations` is
+constructed in this release.
 
 ## Key Lean Names
 
@@ -37,6 +53,8 @@ the Riemann zeta interface, including:
 classicalZetaZerohoodStanding
 classical_zeta_standing_zerohood_equivalence
 aasc_zerohood_endpoint_iff_mathlib_riemannHypothesis
+RemainingClayLevelProofObject
+mathlib_riemannHypothesis_from_remaining_clay_object
 aasc_standing_zero_interior_rigidity
 zeta_global_uniqueness_instantiated
 SameDomainSelectorKernel.selector_blocks_standing

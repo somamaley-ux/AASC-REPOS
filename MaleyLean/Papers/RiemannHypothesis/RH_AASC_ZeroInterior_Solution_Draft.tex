@@ -26,7 +26,7 @@
 \newcommand{\Crit}{\operatorname{Crit}}
 \newcommand{\NZ}{\operatorname{NZ}}
 
-\title{AASC-Native Zero-Interior Rigidity for the Riemann Zeta Interface}
+\title{AASC-Native Zero-Interior Rigidity Reduction for the Riemann Zeta Interface}
 \author{Draft prepared from the AASC/Lean4 development}
 \date{\today}
 
@@ -35,13 +35,14 @@
 \maketitle
 
 \begin{abstract}
-This note records the present AASC/Lean4 status of the Riemann-zeta
-zero-interior route.  The proof is intentionally framework-internal: in a
+This note records the present AASC/Lean4 reduction status of the Riemann-zeta
+zero-interior route.  The argument is intentionally framework-internal: in a
 non-degenerate standing-bearing regime, framework-internality is forced by the
 kernel roles of fixed reference, admissibility, standing, irreversibility, and
 same-scope consequence.  The Lean development imports the bivalence/kernel
 surface and the global admissible-interior uniqueness theorem, instantiates
-them for a fixed zeta standing interface, and proves the AASC-native endpoint:
+them for a fixed zeta standing interface, and proves the AASC-native endpoint
+from an explicit zeta selector/kernel certificate:
 every standing-bearing nontrivial zeta zero-support in the non-degenerate AASC
 zeta interface is critical-line supported.
 
@@ -63,21 +64,24 @@ new kernel-instantiation and global-uniqueness adapter theorems are
 axiom-free.  The canonical standing-as-zerohood bridge is discharged by
 definitional unfolding, and the resulting AASC endpoint for canonical
 zerohood-standing is formally equivalent to mathlib's
-\(\texttt{RiemannHypothesis}\).  The remaining explicitly named certificate
-object is the selector/kernel package used to establish the AASC endpoint, not
-a hidden zero-location assumption.
+\(\texttt{RiemannHypothesis}\).  The remaining Clay-level proof object is
+\(\texttt{Nonempty ClassicalRiemannZetaBridgeObligations}\), equivalently
+\(\texttt{RemainingClayLevelProofObject}\).  Thus the present result is a
+Lean-verified AASC-native reduction, not yet an unconditional completed RH
+proof.
 \end{abstract}
 
 \section{Purpose}
 
-The target of this draft is the AASC-native Riemann-zeta solution, not a
+The target of this draft is the AASC-native Riemann-zeta reduction, not a
 traditional analytic proof.  The classical Riemann Hypothesis is the statement
 \[
   \zeta(s)=0,\quad s \text{ nontrivial}
   \quad\Longrightarrow\quad
   \Re(s)=\Half.
 \]
-The AASC-native theorem has a sharper internal form:
+The AASC-native theorem has a sharper internal form, conditional on the
+explicit zeta selector/kernel certificate:
 \[
   \NZ_{\zeta}(s) \wedge \Stand_{\zeta}(s)
   \quad\Longrightarrow\quad
@@ -91,7 +95,8 @@ This distinction matters.  The analytic problem asks for an unconditional
 classical implication from analytic zerohood alone.  The AASC problem asks
 what follows once zero-support enters non-degenerate standing-bearing use.
 Inside that regime, the AASC kernel is not optional; it is forced by the
-conditions that make the use non-degenerate.
+conditions that make the use non-degenerate.  Constructing the required
+zeta-specific certificate remains the live proof object.
 
 \section{Framework-Internality Is Forced}
 
@@ -377,7 +382,20 @@ interface is equivalent to mathlib's classical
 Thus the bridge audit splits cleanly.  The standing/zerohood equivalence is no
 longer an assumption: it is discharged for the canonical mathlib zeta carrier.
 The selector/kernel certificate is the structural AASC content that proves the
-zero-interior endpoint.  Once that endpoint is read through canonical
+zero-interior endpoint.  The repository therefore reduces the classical RH
+claim to the remaining proof object:
+\[
+\texttt{Nonempty ClassicalRiemannZetaBridgeObligations}.
+\]
+This remaining object is also named:
+\[
+\texttt{RemainingClayLevelProofObject}.
+\]
+Lean records the reduction:
+\[
+\texttt{mathlib\_riemannHypothesis\_from\_remaining\_clay\_object}.
+\]
+Once the endpoint is established from that object and read through canonical
 standing-as-zerohood, Lean proves it is exactly equivalent to the classical RH
 statement.
 
@@ -477,6 +495,10 @@ Canonical zerohood-standing endpoint iff classical RH
   & \texttt{aasc\_zerohood\_endpoint\_iff\_mathlib\_riemannHypothesis} \\
 AASC-native mathlib-carrier endpoint
   & \texttt{aasc\_native\_riemannHypothesis\_from\_bridge\_obligations} \\
+Remaining Clay-level proof object
+  & \texttt{RemainingClayLevelProofObject} \\
+RH from remaining proof object
+  & \texttt{mathlib\_riemannHypothesis\_from\_remaining\_clay\_object} \\
 Classical mathlib RH from certificate
   & \texttt{mathlib\_riemannHypothesis\_from\_kernel\_certificate} \\
 Shortcut audit: critical-line standing equals RH bridge
@@ -529,7 +551,7 @@ captured transcript is stored at:
 
 \section{Interpretation}
 
-The present result should be read as an AASC-native solution:
+The present result should be read as an AASC-native reduction:
 \begin{quote}
 In any non-degenerate standing-bearing zeta regime, the AASC kernel is
 instantiated by necessity.  The imported global uniqueness theorem rules out
@@ -538,14 +560,18 @@ standing-bearing off-critical-line support.  Therefore every standing-bearing
 nontrivial zeta zero-support in the fixed AASC zeta interface is critical-line
 supported.  For the canonical mathlib standing predicate
 \(\texttt{classicalZetaZerohoodStanding}\), this AASC endpoint is formally
-equivalent to mathlib's \(\texttt{RiemannHypothesis}\).
+equivalent to mathlib's \(\texttt{RiemannHypothesis}\).  The remaining
+unconstructed object is
+\(\texttt{Nonempty ClassicalRiemannZetaBridgeObligations}\).
 \end{quote}
 
 This is not an analytic proof by estimation of \(\zeta\) on the critical
 strip.  The proof obligation is shifted: the decisive question is not whether
 one can analytically dominate all possible off-line zeros, but whether an
-off-line zero-support can enter a non-degenerate standing-bearing zeta regime
-without importing an unlicensed horizontal selector or creating a second
-standing interior.  The Lean development proves that it cannot.
+off-line zero-support can enter a non-degenerate standing-bearing zeta regime,
+given the explicit selector/kernel certificate, without importing an
+unlicensed horizontal selector or creating a second standing interior.  The
+Lean development proves that it cannot; constructing the certificate remains
+the live proof object.
 
 \end{document}

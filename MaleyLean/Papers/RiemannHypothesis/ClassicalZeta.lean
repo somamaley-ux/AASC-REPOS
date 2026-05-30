@@ -139,6 +139,14 @@ def ClassicalRiemannZetaBridgeObligations.toKernelCertificate
 def NeedsClassicalRiemannZetaKernelCertificate : Prop :=
   Not (Nonempty ClassicalRiemannZetaBridgeObligations)
 
+/--
+The remaining Clay-level construction target for the present reduction.
+Constructing this object supplies the zeta-specific selector/kernel bridge;
+it is not supplied by the standing/zerohood equivalence theorem below.
+-/
+def RemainingClayLevelProofObject : Prop :=
+  Nonempty ClassicalRiemannZetaBridgeObligations
+
 theorem classicalRiemannZetaBridgeObligations_discharge_certificateNeed
     (O : ClassicalRiemannZetaBridgeObligations) :
     Not NeedsClassicalRiemannZetaKernelCertificate := by
@@ -259,11 +267,23 @@ theorem mathlib_riemannHypothesis_from_bridge_obligations
       O.toKernelCertificate
 
 /--
-The AASC-native RH solution for mathlib's zeta carrier: every nontrivial zero
-that has standing in the non-degenerate AASC zeta interface is critical-line
-supported.  Combined with the canonical standing-as-zerohood equivalence above,
-this is the structural endpoint whose content is equivalent to mathlib's
-classical `RiemannHypothesis`.
+The explicit reduction from the remaining bridge-construction object to
+mathlib's formal `RiemannHypothesis`.
+-/
+theorem mathlib_riemannHypothesis_from_remaining_clay_object
+    (h : RemainingClayLevelProofObject) :
+    RiemannHypothesis := by
+  rcases h with ⟨O⟩
+  exact mathlib_riemannHypothesis_from_bridge_obligations O
+
+/--
+The AASC-native endpoint for mathlib's zeta carrier under an explicit
+selector/kernel certificate: every nontrivial zero that has standing in the
+non-degenerate AASC zeta interface is critical-line supported.
+
+The canonical standing-as-zerohood equivalence above shows that this endpoint
+has the same logical content as mathlib's classical `RiemannHypothesis`, but it
+does not construct the zeta-specific certificate by itself.
 -/
 theorem aasc_native_riemannHypothesis_from_bridge_obligations
     (O : ClassicalRiemannZetaBridgeObligations) :
