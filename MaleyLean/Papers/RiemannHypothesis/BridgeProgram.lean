@@ -145,6 +145,68 @@ theorem mathlib_riemannHypothesis_from_illicit_standing_collapse
     mathlib_riemannHypothesis_from_remaining_clay_object
       (remaining_clay_object_from_illicit_standing_collapse C)
 
+/--
+Logical extrapolation from the matrix pattern "illicit same-domain move or
+explicit scope change".
+
+This is slightly sharper than `IllicitStandingCollapseExtrapolation`: the
+off-line selector need not be classified as illicit outright.  It may instead
+be classified as scope-changing.  But a scope-changing selector cannot preserve
+same-domain standing for the canonical zeta/RH bridge, so either branch blocks
+an off-line standing zero from acting as a same-domain counterexample.
+-/
+structure IllicitOrScopeChangeExtrapolation where
+  IllicitSelector : ℂ -> Prop
+  ScopeChangingSelector : ℂ -> Prop
+  off_line_selector_is_illicit_or_scope_change :
+    forall s : ℂ,
+      classicalZetaZerohoodStanding s ->
+      s.re ≠ 1 / 2 ->
+      IllicitSelector s ∨ ScopeChangingSelector s
+  illicit_selector_collapses_standing :
+    forall s : ℂ,
+      classicalZetaZerohoodStanding s ->
+      IllicitSelector s ->
+      False
+  scope_change_cannot_preserve_same_domain_standing :
+    forall s : ℂ,
+      classicalZetaZerohoodStanding s ->
+      ScopeChangingSelector s ->
+      False
+
+/--
+The illicit/scope-change fork supplies the hard canonical selector-fixedness
+sub-obligation.  Proof idea: if a standing zero were selected off-line, the
+selector is either illicit or scope-changing.  Illicit selected standing
+collapses; scope-changing selected standing exits the same-domain bridge.  Both
+branches contradict same-domain standing.
+-/
+theorem canonical_selector_fixedness_from_illicit_or_scope_change
+    (C : IllicitOrScopeChangeExtrapolation) :
+    CanonicalSelectorFixednessSubobligation := by
+  intro s hstanding hselector
+  by_contra hoff
+  have hfork := C.off_line_selector_is_illicit_or_scope_change s hstanding hoff
+  cases hfork with
+  | inl hillicit =>
+      exact C.illicit_selector_collapses_standing s hstanding hillicit
+  | inr hscope =>
+      exact C.scope_change_cannot_preserve_same_domain_standing s hstanding hscope
+
+theorem remaining_clay_object_from_illicit_or_scope_change
+    (C : IllicitOrScopeChangeExtrapolation) :
+    RemainingClayLevelProofObject := by
+  exact
+    remaining_clay_object_from_canonical_selector_fixedness
+      (canonical_selector_fixedness_from_illicit_or_scope_change C)
+
+theorem mathlib_riemannHypothesis_from_illicit_or_scope_change
+    (C : IllicitOrScopeChangeExtrapolation) :
+    RiemannHypothesis := by
+  exact
+    mathlib_riemannHypothesis_from_remaining_clay_object
+      (remaining_clay_object_from_illicit_or_scope_change C)
+
 end
 
 end RiemannHypothesis

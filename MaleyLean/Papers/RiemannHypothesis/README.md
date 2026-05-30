@@ -107,6 +107,32 @@ This is the formal logical extrapolation from the corpus pattern: illicit
 coordinate/selector moves collapse standing.  The still-live proof burden is
 to justify the two fields for classical zeta without assuming RH.
 
+The matrix also supports the sharper illicit-or-scope-change fork:
+
+```lean
+IllicitOrScopeChangeExtrapolation
+```
+
+Its substantive fields are:
+
+```lean
+off_line_selector_is_illicit_or_scope_change
+illicit_selector_collapses_standing
+scope_change_cannot_preserve_same_domain_standing
+```
+
+From those fields Lean proves:
+
+```lean
+canonical_selector_fixedness_from_illicit_or_scope_change
+remaining_clay_object_from_illicit_or_scope_change
+mathlib_riemannHypothesis_from_illicit_or_scope_change
+```
+
+This records the corpus pattern that an off-line selector must either remain a
+same-domain move, in which case illicit standing collapse applies, or else be a
+scope change, in which case it cannot refute the same-domain zeta/RH endpoint.
+
 The structural AASC endpoint proved from an explicit certificate is:
 
 ```lean

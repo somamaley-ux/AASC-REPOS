@@ -102,6 +102,35 @@ mathlib_riemannHypothesis_from_illicit_standing_collapse
 This is still conditional: the zeta-specific task is to instantiate those two
 fields without assuming RH.
 
+## Illicit-Or-Scope-Change Fork
+
+The release records the sharper matrix pattern that an off-line same-domain
+candidate must either be illicit or be reclassified as a scope change:
+
+```lean
+IllicitOrScopeChangeExtrapolation
+```
+
+Its substantive fields are:
+
+```lean
+off_line_selector_is_illicit_or_scope_change
+illicit_selector_collapses_standing
+scope_change_cannot_preserve_same_domain_standing
+```
+
+Lean proves that this fork implies the hard selector-fixedness sub-obligation,
+the remaining Clay-level object, and mathlib RH:
+
+```lean
+canonical_selector_fixedness_from_illicit_or_scope_change
+remaining_clay_object_from_illicit_or_scope_change
+mathlib_riemannHypothesis_from_illicit_or_scope_change
+```
+
+This is also conditional: the zeta-specific task is to prove the fork and its
+two branch eliminators without assuming RH.
+
 ## Important Scope Statement
 
 This release does not claim an unconditional completed proof of RH.  It proves:

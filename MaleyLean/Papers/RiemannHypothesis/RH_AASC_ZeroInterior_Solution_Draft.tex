@@ -459,6 +459,38 @@ coordinate/selector moves collapse standing.  The remaining zeta-specific task
 is to prove those two fields for the classical off-line selector without
 assuming RH.
 
+The matrix also supports the sharper illicit-or-scope-change fork:
+\[
+\texttt{IllicitOrScopeChangeExtrapolation}.
+\]
+Its substantive fields are:
+\[
+\texttt{off\_line\_selector\_is\_illicit\_or\_scope\_change},
+\]
+\[
+\texttt{illicit\_selector\_collapses\_standing},
+\]
+and
+\[
+\texttt{scope\_change\_cannot\_preserve\_same\_domain\_standing}.
+\]
+Lean proves:
+\[
+\texttt{canonical\_selector\_fixedness\_from\_illicit\_or\_scope\_change},
+\]
+\[
+\texttt{remaining\_clay\_object\_from\_illicit\_or\_scope\_change},
+\]
+and
+\[
+\texttt{mathlib\_riemannHypothesis\_from\_illicit\_or\_scope\_change}.
+\]
+This records the AASC dichotomy: an off-line selector either remains a
+same-domain move, in which case illicit-standing collapse applies, or it is a
+scope change, in which case it cannot refute the same-domain zeta/RH endpoint.
+The remaining zeta-specific task is to instantiate this fork without assuming
+RH.
+
 Once the endpoint is established from that object and read through canonical
 standing-as-zerohood, Lean proves it is exactly equivalent to the classical RH
 statement.
@@ -583,6 +615,14 @@ Remaining object from illicit collapse
   & \texttt{remaining\_clay\_object\_from\_illicit\_standing\_collapse} \\
 RH from illicit collapse
   & \texttt{mathlib\_riemannHypothesis\_from\_illicit\_standing\_collapse} \\
+Illicit-or-scope-change extrapolation
+  & \texttt{IllicitOrScopeChangeExtrapolation} \\
+Hard sub-obligation from illicit-or-scope fork
+  & \texttt{canonical\_selector\_fixedness\_from\_illicit\_or\_scope\_change} \\
+Remaining object from illicit-or-scope fork
+  & \texttt{remaining\_clay\_object\_from\_illicit\_or\_scope\_change} \\
+RH from illicit-or-scope fork
+  & \texttt{mathlib\_riemannHypothesis\_from\_illicit\_or\_scope\_change} \\
 Classical mathlib RH from certificate
   & \texttt{mathlib\_riemannHypothesis\_from\_kernel\_certificate} \\
 Shortcut audit: critical-line standing equals RH bridge
