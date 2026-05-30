@@ -196,6 +196,47 @@ def classicalZetaZerohoodStanding (s : ℂ) : Prop :=
     riemannZeta s = 0
 
 /--
+Same-scope identity for the canonical zeta-zerohood object.
+
+This is intentionally a zerohood identity condition, not a critical-line
+condition: another predicate is in the same classical zeta-zerohood scope
+exactly when it classifies the same nontrivial analytic zerohood points.
+-/
+def SameClassicalZetaZerohoodScope (P : ℂ -> Prop) : Prop :=
+  forall s : ℂ, P s <-> classicalZetaZerohoodStanding s
+
+/--
+Leaving canonical nontrivial zeta zerohood is a scope change.  This is the
+formal version of the review-facing point that a continuation/readout which no
+longer preserves `riemannZeta s = 0` is no longer presenting the same
+mathematical object under evaluation.
+-/
+def ClassicalZetaZerohoodScopeChange (P : ℂ -> Prop) : Prop :=
+  Not (SameClassicalZetaZerohoodScope P)
+
+theorem same_classical_zeta_zerohood_scope_preserves_zerohood
+    {P : ℂ -> Prop}
+    (hscope : SameClassicalZetaZerohoodScope P) :
+    forall s : ℂ, P s <-> classicalZetaZerohoodStanding s := by
+  exact hscope
+
+theorem zerohood_loss_is_classical_zeta_scope_change
+    {P : ℂ -> Prop}
+    (hstanding : exists s : ℂ, classicalZetaZerohoodStanding s /\ Not (P s)) :
+    ClassicalZetaZerohoodScopeChange P := by
+  intro hscope
+  rcases hstanding with ⟨s, hzero, hp⟩
+  exact hp ((hscope s).2 hzero)
+
+theorem same_scope_cannot_lose_classical_zeta_zerohood
+    {P : ℂ -> Prop}
+    (hscope : SameClassicalZetaZerohoodScope P)
+    {s : ℂ}
+    (hzero : classicalZetaZerohoodStanding s) :
+    P s := by
+  exact (hscope s).2 hzero
+
+/--
 The standing/zerohood bridge is discharged for the canonical zerohood-standing
 predicate by definitional unfolding only.  This is the audit theorem hostile
 readers should inspect: it contains no critical-line clause and no RH premise.
