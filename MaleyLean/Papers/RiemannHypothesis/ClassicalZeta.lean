@@ -277,6 +277,49 @@ theorem mathlib_riemannHypothesis_from_remaining_clay_object
   exact mathlib_riemannHypothesis_from_bridge_obligations O
 
 /--
+Conversely, mathlib's formal `RiemannHypothesis` constructs the remaining
+zeta-specific bridge object.  This is an audit theorem, not a shortcut proof:
+it shows that the remaining object has exactly RH-strength.
+-/
+theorem remaining_clay_object_from_mathlib_riemannHypothesis
+    (hRH : RiemannHypothesis) :
+    RemainingClayLevelProofObject := by
+  refine ⟨?_⟩
+  refine
+    { Standing := classicalZetaZerohoodStanding
+      horizontalSelector := fun s : ℂ =>
+        classicalZetaZerohoodStanding s ∧ s.re ≠ 1 / 2
+      fixedByInvariantBundle := fun _ : ℂ => False
+      selectorKernel := ?_
+      analytic_zerohood_has_standing := ?_
+      off_line_support_requires_selector := ?_ }
+  · refine
+      { standing_selector_must_be_invariant_fixed := ?_
+        selector_not_fixed := ?_ }
+    · intro s _hstanding hselector
+      have hline : s.re = 1 / 2 :=
+        hRH s hselector.1.2 hselector.1.1.1 hselector.1.1.2
+      exact False.elim (hselector.2 hline)
+    · intro _s _hselector hfixed
+      exact hfixed
+  · intro s hnotTrivial hpole hzero
+    exact ⟨⟨hnotTrivial, hpole⟩, hzero⟩
+  · intro s hzero hoff
+    exact ⟨hzero, hoff⟩
+
+/--
+The remaining bridge-construction object is logically equivalent to mathlib's
+formal `RiemannHypothesis`.  This is the sharp hostile-referee status theorem:
+the standing/zerohood bridge is discharged, and the only remaining object is
+precisely RH-strength.
+-/
+theorem remaining_clay_object_iff_mathlib_riemannHypothesis :
+    RemainingClayLevelProofObject <-> RiemannHypothesis := by
+  constructor
+  · exact mathlib_riemannHypothesis_from_remaining_clay_object
+  · exact remaining_clay_object_from_mathlib_riemannHypothesis
+
+/--
 The AASC-native endpoint for mathlib's zeta carrier under an explicit
 selector/kernel certificate: every nontrivial zero that has standing in the
 non-degenerate AASC zeta interface is critical-line supported.

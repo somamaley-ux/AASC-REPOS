@@ -24,6 +24,22 @@ From that object, Lean proves:
 mathlib_riemannHypothesis_from_remaining_clay_object
 ```
 
+Conversely, Lean proves that mathlib's `RiemannHypothesis` constructs the
+remaining object:
+
+```lean
+remaining_clay_object_from_mathlib_riemannHypothesis
+```
+
+So the sharp audit theorem is:
+
+```lean
+remaining_clay_object_iff_mathlib_riemannHypothesis
+```
+
+This means the remaining certificate is exactly RH-strength.  It has not been
+constructed unconditionally in this repository.
+
 The structural AASC endpoint proved from an explicit certificate is:
 
 ```lean
@@ -69,7 +85,8 @@ Nonempty ClassicalRiemannZetaBridgeObligations
 That is the remaining Clay-level proof object.  The discharged
 standing/zerohood bridge proves there is no critical-line smuggling in the
 comparison with classical zerohood; it does not by itself provide the
-zeta-specific selector/kernel certificate.
+zeta-specific selector/kernel certificate.  Lean proves this remaining object
+is equivalent to mathlib's `RiemannHypothesis`.
 
 ## Referee Print Packet
 

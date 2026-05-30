@@ -36,6 +36,18 @@ The reduction from the remaining proof object to mathlib RH is:
 mathlib_riemannHypothesis_from_remaining_clay_object
 ```
 
+The converse construction from mathlib RH to the remaining proof object is:
+
+```lean
+remaining_clay_object_from_mathlib_riemannHypothesis
+```
+
+Therefore Lean proves the audit theorem:
+
+```lean
+remaining_clay_object_iff_mathlib_riemannHypothesis
+```
+
 ## Important Scope Statement
 
 This release does not claim an unconditional completed proof of RH.  It proves:
@@ -44,7 +56,8 @@ This release does not claim an unconditional completed proof of RH.  It proves:
 - the AASC endpoint iff mathlib RH bridge is clean;
 - RH follows from the explicit bridge-obligation object;
 - the zeta-specific object `Nonempty ClassicalRiemannZetaBridgeObligations`
-  remains to be constructed.
+  remains to be constructed;
+- that remaining object is exactly RH-strength.
 
 Thus the release should be cited as a Lean-verified AASC-native reduction, not
 as a finished Clay-level RH proof.

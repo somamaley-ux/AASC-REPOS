@@ -395,6 +395,16 @@ Lean records the reduction:
 \[
 \texttt{mathlib\_riemannHypothesis\_from\_remaining\_clay\_object}.
 \]
+Lean also proves the converse construction:
+\[
+\texttt{remaining\_clay\_object\_from\_mathlib\_riemannHypothesis}.
+\]
+Thus the exact audit theorem is:
+\[
+\texttt{remaining\_clay\_object\_iff\_mathlib\_riemannHypothesis}.
+\]
+This does not construct the remaining object unconditionally; it shows that
+the remaining certificate is exactly RH-strength.
 Once the endpoint is established from that object and read through canonical
 standing-as-zerohood, Lean proves it is exactly equivalent to the classical RH
 statement.
@@ -499,6 +509,10 @@ Remaining Clay-level proof object
   & \texttt{RemainingClayLevelProofObject} \\
 RH from remaining proof object
   & \texttt{mathlib\_riemannHypothesis\_from\_remaining\_clay\_object} \\
+Remaining proof object from RH
+  & \texttt{remaining\_clay\_object\_from\_mathlib\_riemannHypothesis} \\
+Remaining proof object iff RH
+  & \texttt{remaining\_clay\_object\_iff\_mathlib\_riemannHypothesis} \\
 Classical mathlib RH from certificate
   & \texttt{mathlib\_riemannHypothesis\_from\_kernel\_certificate} \\
 Shortcut audit: critical-line standing equals RH bridge
