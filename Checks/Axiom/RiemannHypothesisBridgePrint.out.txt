@@ -1,0 +1,15 @@
+def MaleyLean.Papers.RiemannHypothesis.classicalZetaZerohoodStanding : ℂ → Prop :=
+fun s => ((¬∃ n, s = -2 * (↑n + 1)) ∧ s ≠ 1) ∧ riemannZeta s = 0
+theorem MaleyLean.Papers.RiemannHypothesis.classical_zeta_standing_zerohood_equivalence : ClassicalZetaStandingZerohoodEquivalence
+  classicalZetaZerohoodStanding :=
+{ standing_iff_nontrivial_zerohood := fun s => Iff.rfl }
+'MaleyLean.Papers.RiemannHypothesis.classical_zeta_standing_zerohood_equivalence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem MaleyLean.Papers.RiemannHypothesis.aasc_zerohood_endpoint_iff_mathlib_riemannHypothesis : (classicalRiemannZetaInterface
+      classicalZetaZerohoodStanding).aascStandingCriticalLineSupported ↔
+  RiemannHypothesis :=
+aasc_endpoint_iff_mathlib_riemannHypothesis_under_zerohood_standing classical_zeta_standing_zerohood_equivalence
+'MaleyLean.Papers.RiemannHypothesis.aasc_zerohood_endpoint_iff_mathlib_riemannHypothesis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
