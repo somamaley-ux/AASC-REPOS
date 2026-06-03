@@ -1,0 +1,18 @@
+import MaleyLean.Papers.YangMills.Kernel.EndpointSectorExclusion
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMEndpointSectorExclusion.no_nonvacuum_admissible_extended_support
+#print axioms YMEndpointSectorExclusion.exact_endpoint
+#print axioms YMEndpointSectorExclusion.vacuum_present
+
+#print axioms YMEndpointExactnessPayload.exact_local_net_endpoint
+#print axioms YMEndpointExactnessPayload.vacuum_vector_present
+#print axioms YMEndpointExactnessPayload.no_extended_support
+#print axioms YMEndpointExactnessPayload.closed
+
+end YangMills
+end Papers
+end MaleyLean

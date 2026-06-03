@@ -1,0 +1,20 @@
+import MaleyLean.Papers.YangMills.Kernel.OSWightmanReconstructionPayload
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMOSReconstructionPayload.closed_holds
+#print axioms YMWightmanFieldPayload.closed_holds
+#print axioms YMOSWightmanReconstructionPayload.os_closed
+#print axioms YMOSWightmanReconstructionPayload.wightman_closed
+#print axioms YMOSWightmanReconstructionPayload.reconstruction_ready
+#print axioms YMOSWightmanReconstructionPayload.wightman_fields_present
+#print axioms YMOSWightmanReconstructionPayload.vacuum_vector_present
+#print axioms YMOSWightmanReconstructionPayload.smearing_defined
+#print axioms YMOSWightmanReconstructionPayload.vacuum_correlations_defined
+#print axioms YMOSWightmanReconstructionPayload.closed
+
+end YangMills
+end Papers
+end MaleyLean

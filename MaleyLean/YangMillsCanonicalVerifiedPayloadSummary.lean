@@ -1,0 +1,8 @@
+import MaleyLean.Papers.YangMills.Surface.CanonicalVerifiedPayloadSummary
+
+namespace MaleyLean
+
+abbrev YangMillsCanonicalVerifiedPayloadSummaryTopExportStatement :=
+  YangMillsCanonicalVerifiedPayloadSummaryStatement
+
+end MaleyLean

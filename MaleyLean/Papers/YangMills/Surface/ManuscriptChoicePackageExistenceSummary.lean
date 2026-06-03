@@ -1,0 +1,9 @@
+import MaleyLean.Papers.YangMills.Kernel.ManuscriptChoicePackageExistence
+
+namespace MaleyLean
+
+theorem YangMillsManuscriptChoicePackageExistenceSummaryStatement :
+  ym_closed_manuscript_completion ↔ Nonempty YMManuscriptChoicePackage := by
+  exact YangMillsClosedManuscriptCompletionIffChoicePackageStatement
+
+end MaleyLean

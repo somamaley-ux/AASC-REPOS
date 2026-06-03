@@ -1,0 +1,9 @@
+import MaleyLean.Papers.YangMills.Surface.ManuscriptChoicePackageCompletionCriterionSummary
+
+namespace MaleyLean
+
+theorem YangMillsManuscriptChoicePackageCompletionCriterionSummaryTopExportStatement :
+  ym_manuscript_choice_package_completion ↔ ym_closed_manuscript_completion := by
+  exact YangMillsManuscriptChoicePackageCompletionCriterionSummaryStatement
+
+end MaleyLean

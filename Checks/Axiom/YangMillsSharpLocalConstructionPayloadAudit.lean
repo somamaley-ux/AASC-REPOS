@@ -1,0 +1,17 @@
+import MaleyLean.Papers.YangMills.Kernel.SharpLocalConstructionPayload
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMFiniteCapConstructionPayload.closed_holds
+#print axioms YMBoundedStateBridgePayload.closed_holds
+#print axioms YMSharpLocalInductiveUnionPayload.closed_holds
+#print axioms YMSharpLocalConstructionPayload.finite_cap_closed
+#print axioms YMSharpLocalConstructionPayload.bounded_bridge_closed
+#print axioms YMSharpLocalConstructionPayload.inductive_union_closed
+#print axioms YMSharpLocalConstructionPayload.closed
+
+end YangMills
+end Papers
+end MaleyLean

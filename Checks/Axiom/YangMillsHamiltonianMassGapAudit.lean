@@ -1,0 +1,23 @@
+import MaleyLean.Papers.YangMills.Kernel.HamiltonianMassGap
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMHamiltonianOrderedMassGap.positive_gap
+#print axioms YMHamiltonianOrderedMassGap.vacuum_energy_in_spectrum
+#print axioms YMHamiltonianOrderedMassGap.no_subgap_spectrum
+#print axioms YMHamiltonianOrderedMassGap.spectral_values_are_vacuum_or_above_gap
+#print axioms YMHamiltonianOrderedMassGap.zero_energy_is_vacuum
+#print axioms YMHamiltonianOrderedMassGap.vacuum_is_zero_energy
+
+#print axioms YMHamiltonianRealMassGap.positive_gap
+#print axioms YMHamiltonianRealMassGap.vacuum_energy_in_spectrum
+#print axioms YMHamiltonianRealMassGap.no_subgap_spectrum
+#print axioms YMHamiltonianRealMassGap.spectral_values_are_vacuum_or_above_gap
+#print axioms YMHamiltonianRealMassGap.zero_energy_is_vacuum
+#print axioms YMHamiltonianRealMassGap.vacuum_is_zero_energy
+
+end YangMills
+end Papers
+end MaleyLean

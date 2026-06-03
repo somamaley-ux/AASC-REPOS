@@ -1,0 +1,25 @@
+import MaleyLean.Papers.YangMills.StandardClayExtensionBackground
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMClaySectorLayerAdmissibility.closed
+#print axioms YMClayCompletionAdmissibility.closed
+#print axioms YMClaySubgapClassification.no_nonvacuum_subgap_sector
+#print axioms YMClayExtensionAdmissibilityPayload.sector_layer_closed
+#print axioms YMClayExtensionAdmissibilityPayload.completion_closed
+#print axioms YMClayExtensionAdmissibilityPayload.no_faithful_same_domain_extension
+#print axioms YMClayExtensionAdmissibilityPayload.subgap_sector_is_vacuum_ray
+#print axioms YMClayExtensionAdmissibilityPayload.complete_theory_mass_gap
+#print axioms currentManuscriptClayExtensionPayload
+#print axioms currentManuscriptClayExtensionPayloadBridge
+#print axioms currentManuscriptClayExtensionTransfer
+#print axioms currentManuscriptStandardClayExtensionImport
+#print axioms currentManuscriptStandardClayExtensionImport_nonempty
+#print axioms StandardClayExtensionImport.payload_nonempty
+#print axioms ymClayExtensionAdmissibilityPayload_nonempty_of_standard_import
+
+end YangMills
+end Papers
+end MaleyLean
