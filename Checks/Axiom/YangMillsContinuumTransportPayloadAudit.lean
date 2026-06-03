@@ -1,0 +1,16 @@
+import MaleyLean.Papers.YangMills.Kernel.ContinuumTransportPayload
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms YMContinuumTransportOutputPayload.closed_holds
+#print axioms YMContinuumTransportPayload.density_handoff_ready
+#print axioms YMContinuumTransportPayload.graph_core_handoff_ready
+#print axioms YMContinuumTransportPayload.qe3_transport_bound_ready
+#print axioms YMContinuumTransportPayload.output_closed
+#print axioms YMContinuumTransportPayload.closed
+
+end YangMills
+end Papers
+end MaleyLean

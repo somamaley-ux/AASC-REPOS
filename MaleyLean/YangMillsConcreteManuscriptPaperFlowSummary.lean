@@ -1,0 +1,9 @@
+import MaleyLean.Papers.YangMills.Surface.ConcreteManuscriptPaperFlowSummary
+
+namespace MaleyLean
+
+theorem YangMillsConcreteManuscriptPaperFlowSummaryTopExportStatement :
+  ym_concrete_closed_manuscript_paper_flow_statement := by
+  exact YangMillsConcreteManuscriptPaperFlowSummaryStatement
+
+end MaleyLean

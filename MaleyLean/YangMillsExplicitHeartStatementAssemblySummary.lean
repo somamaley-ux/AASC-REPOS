@@ -1,0 +1,8 @@
+import MaleyLean.Papers.YangMills.Surface.ExplicitHeartStatementAssemblySummary
+
+namespace MaleyLean
+
+abbrev YangMillsExplicitHeartStatementAssemblySummaryTopExportStatement :=
+  YangMillsExplicitHeartStatementAssemblySummaryStatement
+
+end MaleyLean

@@ -7,6 +7,7 @@ This repository currently contains paper-facing formalizations for:
 - `Minimal Conditions for Admissible Construction`
 - `The Bivalence Theorem for Non-Degenerate Reasoning`
 - `Claim Standing and Legitimacy: A Universal Audit Protocol for Laundering Exclusion and Reportable Output`
+- the manuscript-facing Yang-Mills local-net / Clay-extension A+ audit surface
 - a small formalization smoke-test module
 
 The central formal theme is AASC: admissibility-and-standing conservation. The
@@ -96,6 +97,38 @@ The paper-facing files are:
 The `paper/` directory contains the phase-14 LaTeX/PDF snapshot for the
 bivalence manuscript.
 
+## Yang-Mills A+ Audit Surface
+
+The Yang-Mills development exposes a manuscript-facing A+ audit endpoint for the
+local-net-to-Clay-extension theorem-routing chain. The audited surface covers
+the fixed-lattice gap route, sharp local construction, continuum transport,
+OS/Wightman reconstruction, Minkowski/Hamiltonian gap route, endpoint exactness,
+Clay extension admissibility, the A+ obligation and subobligation ledgers, and
+the stem-to-stern promotion endpoint.
+
+The current audit command is:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/check-yang-mills-a-plus-audit.ps1
+```
+
+That runner prints the Lean toolchain and mathlib revision, scans
+`MaleyLean/Papers/YangMills` and `Checks/Axiom` for live `axiom`, `sorry`,
+`admit`, or `unsafe` declarations, builds `MaleyLean.Papers.YangMills`, and runs
+the fourteen Yang-Mills A+ audit files.
+
+Latest verified audit posture:
+
+- Lean toolchain: `leanprover/lean4:v4.28.0`
+- mathlib revision: `8f9d9cff6bd728b17a24e163c9402775d9e6a365`
+- manuscript-facing progress endpoint: `ymAPlusCurrentProgressSnapshot.percent = 100`
+- A+ subobligation ledger: `44` closed, `0` open
+- prohibited-placeholder scan: no live `axiom`, `sorry`, `admit`, or `unsafe`
+  declarations on the audited Yang-Mills surface
+- foundational boundary: some `#print axioms` reports include standard Lean
+  classical foundations such as `propext`, `Classical.choice`, and `Quot.sound`;
+  these are not project-specific Yang-Mills axioms
+
 ## Build
 
 ```powershell
@@ -120,6 +153,12 @@ Minimal Conditions for Admissible Construction:
 
 ```powershell
 lake env lean Checks\Axiom\MinimalConditionsForAdmissibleConstructionAxiomCheck.lean
+```
+
+Yang-Mills A+ endpoint audit:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/check-yang-mills-a-plus-audit.ps1
 ```
 
 The current `Claim Standing and Legitimacy` paper-facing theorem surface is

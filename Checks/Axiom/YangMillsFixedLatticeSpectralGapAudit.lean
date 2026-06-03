@@ -1,0 +1,35 @@
+import MaleyLean.Papers.YangMills.Kernel.FixedLatticeSpectralGap
+
+namespace MaleyLean
+namespace Papers
+namespace YangMills
+
+#print axioms HasOrderedSpectralGap.gap_pos
+#print axioms HasOrderedSpectralGap.vacuum_mem
+#print axioms HasOrderedSpectralGap.zero_or_gap_le
+#print axioms HasOrderedSpectralGap.no_spectrum_in_open_gap
+#print axioms HasOrderedSpectralGap.not_mem_open_gap
+#print axioms HasOrderedSpectralGap.of_subset
+
+#print axioms HasRealSpectralGap.gap_pos
+#print axioms HasRealSpectralGap.vacuum_mem
+#print axioms HasRealSpectralGap.zero_or_gap_le
+#print axioms HasRealSpectralGap.no_spectrum_in_open_gap
+#print axioms HasRealSpectralGap.not_mem_open_gap
+#print axioms HasRealSpectralGap.spectrum_value_zero_or_above_gap
+#print axioms HasRealSpectralGap.of_subset
+
+#print axioms YMFixedLatticeRealSpectralGap.positive_gap
+#print axioms YMFixedLatticeRealSpectralGap.vacuum_in_spectrum
+#print axioms YMFixedLatticeRealSpectralGap.no_subgap_spectrum
+#print axioms YMFixedLatticeRealSpectralGap.spectral_values_are_vacuum_or_above_gap
+
+#print axioms YMUniformFixedLatticeRealSpectralGap.positive_gap
+#print axioms YMUniformFixedLatticeRealSpectralGap.vacuum_in_each_spectrum
+#print axioms YMUniformFixedLatticeRealSpectralGap.no_subgap_spectrum
+#print axioms YMUniformFixedLatticeRealSpectralGap.spectral_values_are_vacuum_or_above_gap
+#print axioms YMUniformFixedLatticeRealSpectralGap.fixed_volume_certificate
+
+end YangMills
+end Papers
+end MaleyLean
